@@ -12,7 +12,7 @@ jobs:
           fetch-depth: 2
       - name: Install helm and plugins
         run: ./scripts/install.sh
-      # - name: Release charts
-      #   run: ./scripts/release.sh
-      #   env:
-      #     GCLOUD_SERVICE_ACCOUNT_KEY: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_KEY }}
+      - name: Release charts
+        run: ./scripts/release.sh
+        env:
+          GCLOUD_SERVICE_ACCOUNT_KEY: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_KEY }}
